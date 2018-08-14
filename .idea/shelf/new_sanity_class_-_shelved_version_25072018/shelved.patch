@@ -1,0 +1,69 @@
+Index: src/test/java/Tests/Sanity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/Tests/Sanity.java	(date 1532471675139)
++++ src/test/java/Tests/Sanity.java	(date 1532471675139)
+@@ -0,0 +1,61 @@
++package Tests;
++
++import Utils.Base;
++import org.junit.AfterClass;
++import org.junit.BeforeClass;
++import org.junit.Test;
++import org.openqa.selenium.chrome.ChromeDriver;
++import org.openqa.selenium.interactions.Actions;
++import org.openqa.selenium.support.PageFactory;
++import org.openqa.selenium.support.ui.ExpectedConditions;
++import org.openqa.selenium.support.ui.WebDriverWait;
++import pages.FeaturesPage;
++import pages.MainPage;
++import pages.wizard;
++
++import java.util.concurrent.TimeUnit;
++
++public class Sanity extends Base
++{
++    @BeforeClass
++    public static void startSession()
++    {
++        System.setProperty ("webdriver.chrome.driver","C:\\SeleniumDrivers\\chromedriver.exe");
++        driver = new ChromeDriver();
++        driver.get ("https://www.swiftic.com/");
++        driver.manage ().window ().maximize ();
++        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
++        mp = PageFactory.initElements(driver, MainPage.class);
++        fp = PageFactory.initElements (driver, FeaturesPage.class);
++        wz = PageFactory.initElements (driver, wizard.class);
++        WebDriverWait wait = new WebDriverWait(driver, 30);
++
++    }
++//Need to improve the test!!!
++    @Test
++    public void test()
++    {
++        Actions actions = new Actions(driver);
++        WebDriverWait wait = new WebDriverWait(driver, 90);
++        mp.createbutton.click ();
++        wait.until (ExpectedConditions.visibilityOf (wz.appNameField));
++        wz.appNameField.sendKeys ("CNN");
++        wz.appNameNext.click ();
++        wait.until (ExpectedConditions.visibilityOf (wz.facebookUrl));
++        wz.facebookUrl.sendKeys ("CNN");
++        wz.facebookNext.click ();
++        actions.click ().moveToElement (wz.startButton).click ().build ().perform ();
++        wait.until (ExpectedConditions.visibilityOf (fp.addFeatureButton));
++        fp.addFeatureButton.click ();
++        wait.until (ExpectedConditions.visibilityOf (fp.photosFeature));
++        fp.photosFeature.click ();
++        fp.createFeatureButton.click ();
++
++    }
++
++    @AfterClass
++    public static void closeSession()
++    {
++        driver.quit ();
++    }
++}

@@ -1,0 +1,41 @@
+Index: src/test/java/pages/MainPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/pages/MainPage.java	(date 1532466906995)
++++ src/test/java/pages/MainPage.java	(date 1532466906995)
+@@ -0,0 +1,33 @@
++package pages;
++
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.support.FindBy;
++import org.openqa.selenium.support.How;
++
++
++
++public class MainPage extends Utils.Base
++{
++    @FindBy(how = How.ID, using = "menu-item-17422")
++    public WebElement createbutton;
++
++    @FindBy(how = How.ID, using = "chosen_language")
++    public WebElement chosen_language;
++
++    @FindBy(how = How.ID, using = "chosen_language")
++    public WebElement language_1;
++
++    @FindBy(how = How.ID, using = "chosen_language")
++    public WebElement language_2;
++
++    @FindBy(how = How.ID, using = "chosen_language")
++    public WebElement language_3;
++
++    @FindBy(how = How.ID, using = "chosen_language")
++    public WebElement language_4;
++
++    @FindBy(how = How.ID, using = "chosen_language")
++    public WebElement language_5;
++
++}
++

@@ -43,6 +43,13 @@ public class wizard
     @FindBy(how = How.XPATH, using = "*//div[4]/div/a")
     public WebElement websiteBack;
 
+    @FindBy(how = How.ID, using = "tourStepContainer")
+    public WebElement welcomeDialog;
+
+    @FindBy(how = How.ID, using = "next ng-binding")
+    public WebElement startButton;
+
+
 
 
 

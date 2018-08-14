@@ -37,7 +37,7 @@ public class FeaturesPage extends  Utils.Base
     @FindBy(how = How.XPATH, using = "//*[@id=\"pages_list_container\"]/ul/li[5]/a")
     public WebElement feature_5;
     //add feature button
-    @FindBy(how = How.XPATH, using = "//*[@id=\"editor\"]/div[6]/div/a")
+    @FindBy(how = How.CLASS_NAME, using = "buttomStripWrapper")
     public WebElement addFeatureButton;
 
     //add feature categories "Recommended"
@@ -192,6 +192,25 @@ public class FeaturesPage extends  Utils.Base
     //All features button
     @FindBy(how = How.XPATH, using = "//*[@id=\"pages_list\"]/div/div[1]/ul/li[6]/a")
     public WebElement allFeaturesButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"editor\"]/div[6]/div/a")
+    public WebElement createFeatureButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"step_0\"]/div/div[3]/div[2]/button[2]")
+    public WebElement tourStepPopUp;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"step_1\"]/div/div[1]")
+    public WebElement closepopup;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"app_nav\"]/div[2]/div[1]/section[2]/div/a[2]")
+    public WebElement saveFaetureButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"app_nav\"]/div[2]/div[1]/section[3]/div/a/span")
+    public WebElement doneEditing;
+
+    @FindBy(how = How.XPATH, using = "/html/body/div[6]/div/div/div/div/div[2]/div/a[2]")
+    public WebElement addButton;
+
 
 
 
