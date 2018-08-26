@@ -4,12 +4,12 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import jdk.internal.org.xml.sax.SAXException;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.w3c.dom.Document;
 import pages.FeaturesPage;
+import pages.LoginPage;
 import pages.mainPage;
 import pages.wizard;
 
@@ -18,6 +18,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
@@ -27,12 +28,14 @@ public class Base
     protected static ExtentReports extent;
     protected static ExtentTest test;
     protected static mainPage mp;
+    protected static LoginPage lp;
     protected static wizard wz;
     protected static FeaturesPage fp;
     protected static String PropFIlePath = "C:\\workspace\\swiftic\\env.properties";
-    public  Actions actions = new Actions (driver);
+//    public  Actions actions = new Actions (driver);
 
 
+    Random rndNum = new Random ();
 
     public static String CaptureScreen(WebDriver driver, String ScreenShotsPath) {
 
@@ -65,14 +68,14 @@ public class Base
     public void selectValues(WebElement elementToselect)
     {
 
-        actions.moveToElement(elementToselect).click().build().perform();
+//        actions.moveToElement(elementToselect).click().build().perform();
 
     }
 
     // mouse hover method
     public void hover(WebElement elementToselect)
     {
-        actions.moveToElement(elementToselect).build().perform();
+//        actions.moveToElement(elementToselect).build().perform();
 
     }
 
