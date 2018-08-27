@@ -37,7 +37,7 @@ public class FeaturesPage extends  Utils.Base
     @FindBy(how = How.XPATH, using = "//*[@id=\"pages_list_container\"]/ul/li[5]/a")
     public WebElement feature_5;
     //add feature button
-    @FindBy(how = How.CLASS_NAME, using = "buttomStripWrapper")
+    @FindBy(how = How.CLASS_NAME, using = "//*[@id=\"editor\"]/div[6]/div/a")
     public WebElement addFeatureButton;
 
     //add feature categories "Recommended"
@@ -205,19 +205,56 @@ public class FeaturesPage extends  Utils.Base
     @FindBy(how = How.XPATH, using = "//*[@id=\"app_nav\"]/div[2]/div[1]/section[2]/div/a[2]")
     public WebElement saveFaetureButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"app_nav\"]/div[2]/div[1]/section[3]/div/a/span")
+    @FindBy(how = How.XPATH, using = "//*/section[3]/div/a/span")
     public WebElement doneEditing;
 
     @FindBy(how = How.XPATH, using = "/html/body/div[6]/div/div/div/div/div[2]/div/a[2]")
-    public WebElement addButton;
+    public WebElement saveDialogButton;
 
+    @FindBy(how = How.XPATH, using = "//*[2]/input")
+    public WebElement phoneNumberField;
 
+    @FindBy(how = How.XPATH, using = "//*/section[2]/div/a[1]")
+    public WebElement discard;
+
+    @FindBy(how = How.XPATH, using = "//*/section[2]/div/a[2]")
+    public WebElement saveFeature;
+
+//    @FindBy(how = How.XPATH, using = "/html/body/div[6]/div/div/div/div/div[2]/div/a[2]")
+//    public WebElement addButton;
 
 
     // need to continue the page elements identification inside the features!
     //after selecting all feature option
 
+    //choose plan screen
+    @FindBy(how = How.XPATH, using = "//*div[1]/div[5]/div[1]")
+    public WebElement letsGoButton;
 
+    //payment details
+    @FindBy(how = How.XPATH, using = "//*[@id=\"plimusShopperInfoFullName\"]")
+    public WebElement fullName;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"plimusShopperInfoPhone\"]")
+    public WebElement phoneNumber;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"plimusCreditCardNumber\"]")
+    public WebElement creditCardNumber;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"plimusCreditCardSecurityCode\"]")
+    public WebElement securityCode;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"checkoutButton\"]/span")
+    public WebElement payButton;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"oldcpIframe\"]")
+    public WebElement iframe;
+
+    @FindBy(how = How.XPATH, using = "//*[@id=\"wrap\"]/div/div[2]/div[1]/div[3]/div[2]")
+    public WebElement yearly;
+
+    @FindBy(how = How.ID, using = "id3a")
+    public WebElement checkBoxStoreMyCard;
 
 
 
