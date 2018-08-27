@@ -1,0 +1,74 @@
+Index: src/main/java/pages/FeaturesPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pages;\n\nimport org.openqa.selenium.WebElement;\nimport org.openqa.selenium.support.FindBy;\nimport org.openqa.selenium.support.How;\n\npublic class FeaturesPage extends  Utils.Base\n{\n    // default feature Tab\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"wizard_menu\\\"]/a[1]/span\")\n    public WebElement appFeaturesTab;\n    // style Tab\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"wizard_menu\\\"]/a[2]/span\")\n    public WebElement styleAndNavigationTab;\n    // pluse icon on the top right corner\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"my_pages\\\"]/div/a[1]\")\n    public WebElement plusIcon;\n    // left arrow\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"my_pages\\\"]/div/a[2]\")\n    public WebElement navigateLeft;\n    // right arrow\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"my_pages\\\"]/div/a[3]\")\n    public WebElement navigateRight;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list_container\\\"]/ul/li[1]/a/span[2]\")\n    public WebElement feature_1;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list_container\\\"]/ul/li[2]/a/span[2]\")\n    public WebElement feature_2;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list_container\\\"]/ul/li[3]/a/span[2]\")\n    public WebElement feature_3;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list_container\\\"]/ul/li[4]/a/span[2]\")\n    public WebElement feture_4;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list_container\\\"]/ul/li[5]/a\")\n    public WebElement feature_5;\n    //add feature button\n    @FindBy(how = How.CLASS_NAME, using = \"buttomStripWrapper\")\n    public WebElement addFeatureButton;\n\n    //add feature categories \"Recommended\"\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/div/div/ul/li[1]/a\")\n    public WebElement Recommended;\n\n    //category \"Recommended \" --> callus\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[1]/a/div[1]\")\n    public WebElement callUsFeature;\n\n    //category \"Recommended \" --> contact us\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[2]/a/div[1]\")\n    public WebElement contactUsFeature;\n\n    //category \"Recommended \" --> map\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[3]/a/div[1]\")\n    public WebElement mapFeature;\n\n    //category \"Recommended \" --> photos\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[4]/a/div[1]\")\n    public WebElement photosFeature;\n\n    //category \"Recommended \" --> form\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[5]/a/div[1]\")\n    public WebElement formFeature;\n\n    //category \"Recommended \" --> coupons\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[6]/a/div[1]\")\n    public WebElement couponsFeature;\n\n    //category \"Recommended \" --> scratchCard\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[7]/a/div[1]\")\n    public WebElement scratchCardFeature;\n\n    //category \"Recommended \" --> loyaltyCards\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[8]/a/div[1]\")\n    public WebElement loyaltyCardsFeature;\n\n    //category \"Recommended \" --> facebookFeature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[9]/a/div[1]\")\n    public WebElement facebookFeature;\n\n    //category \"Recommended \" --> custom Feature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[10]/a/div[1]\")\n    public WebElement customFeature;\n\n    //category \"Recommended \" --> liveAlbumFeature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[11]/a/div[1]\")\n    public WebElement liveAlbumFeature;\n\n\n\n    //add feature categories \"Loyalty\"\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/div/div/ul/li[2]/a\")\n    public WebElement loyaltyCategory;\n\n    //category \"Loyalty \" --> couponsFeature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[1]/a/div[1]\")\n    public WebElement couponsFeature2;\n\n    //category \"Loyalty \" --> scratchCardFeature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[2]/a/div[1]\")\n    public WebElement scratchCardFeature2;\n\n    //category \"Recommended \" --> loyaltyCards\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[3]/a/div[1]\")\n    public WebElement loyaltyCardsFeature2;\n\n\n\n\n    //add feature categories \"Sales\"\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/div/div/ul/li[3]/a\")\n    public WebElement salesCategory;\n\n    //category \"sales\" --> store\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[4]/a/div[1]\")\n    public WebElement storeFeature;\n\n\n\n    //add feature categories \"Contact\"\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/div/div/ul/li[4]/a\")\n    public WebElement contactCategory;\n\n    //category \"Contact\" --> Call Us\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[1]/a/div[1]\")\n    public WebElement callus2;\n\n    //category \"Contact\" --> Contact Us\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[2]/a/div[1]\")\n    public WebElement contactUs2;\n\n    //category \"Contact\" --> Map\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[3]/a/div[1]\")\n    public WebElement map2;\n\n    //category \"Contact\" --> Email Us\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[4]/a/div[1]\")\n    public WebElement emailUsFeature;\n\n    //category \"Contact\" --> Form\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[5]/a/div[1]\")\n    public WebElement form2;\n\n    //category \"Contact\" --> About Us\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[6]/a/div[1]\")\n    public WebElement aboutUs;\n\n    //category \"Contact\" --> bookAnAppointment\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[7]/a/div[1]\")\n    public WebElement bookAnAppointment;\n\n\n\n    //add feature categories \"Engagement\"\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/div/div/ul/li[5]/a\")\n    public WebElement engagementCategory;\n\n    //category \"Engagement\" --> facebook\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[1]/a/div[1]\")\n    public WebElement facebook2;\n\n    //category \"Contact\" --> instagramFeature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[2]/a/div[1]\")\n    public WebElement instagramFeature;\n\n    //category \"Contact\" --> twitterFeature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[3]/a/div[1]\")\n    public WebElement twitterFeature;\n\n    //category \"Contact\" --> eventsFeature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[4]/a/div[1]\")\n    public WebElement eventsFeature;\n\n    //category \"Contact\" --> newsFeature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[5]/a/div[1]\")\n    public WebElement newsFeature;\n\n    //category \"Contact\" --> form3\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[6]/a/div[1]\")\n    public WebElement form3;\n\n    //category \"Contact\" --> videoFeature\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[7]/a/div[1]\")\n    public WebElement videoFeature;\n\n    //category \"Contact\" --> photos2\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/ul/li[8]/a/div[1]\")\n    public WebElement photos2;\n\n    //All features button\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"pages_list\\\"]/div/div[1]/ul/li[6]/a\")\n    public WebElement allFeaturesButton;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"editor\\\"]/div[6]/div/a\")\n    public WebElement createFeatureButton;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"step_0\\\"]/div/div[3]/div[2]/button[2]\")\n    public WebElement tourStepPopUp;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"step_1\\\"]/div/div[1]\")\n    public WebElement closepopup;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"app_nav\\\"]/div[2]/div[1]/section[2]/div/a[2]\")\n    public WebElement saveFaetureButton;\n\n    @FindBy(how = How.XPATH, using = \"//*[@id=\\\"app_nav\\\"]/div[2]/div[1]/section[3]/div/a/span\")\n    public WebElement doneEditing;\n\n    @FindBy(how = How.XPATH, using = \"/html/body/div[6]/div/div/div/div/div[2]/div/a[2]\")\n    public WebElement addButton;\n\n\n\n\n    // need to continue the page elements identification inside the features!\n    //after selecting all feature option\n\n\n\n\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/pages/FeaturesPage.java	(date 1534272114000)
++++ src/main/java/pages/FeaturesPage.java	(date 1535321745324)
+@@ -37,7 +37,7 @@
+     @FindBy(how = How.XPATH, using = "//*[@id=\"pages_list_container\"]/ul/li[5]/a")
+     public WebElement feature_5;
+     //add feature button
+-    @FindBy(how = How.CLASS_NAME, using = "buttomStripWrapper")
++    @FindBy(how = How.CLASS_NAME, using = "//*[@id=\"editor\"]/div[6]/div/a")
+     public WebElement addFeatureButton;
+ 
+     //add feature categories "Recommended"
+@@ -205,19 +205,53 @@
+     @FindBy(how = How.XPATH, using = "//*[@id=\"app_nav\"]/div[2]/div[1]/section[2]/div/a[2]")
+     public WebElement saveFaetureButton;
+ 
+-    @FindBy(how = How.XPATH, using = "//*[@id=\"app_nav\"]/div[2]/div[1]/section[3]/div/a/span")
++    @FindBy(how = How.XPATH, using = "//*/section[3]/div/a/span")
+     public WebElement doneEditing;
+ 
+     @FindBy(how = How.XPATH, using = "/html/body/div[6]/div/div/div/div/div[2]/div/a[2]")
+-    public WebElement addButton;
++    public WebElement saveDialogButton;
++
++    @FindBy(how = How.XPATH, using = "//*[2]/input")
++    public WebElement phoneNumberField;
+ 
++    @FindBy(how = How.XPATH, using = "//*/section[2]/div/a[1]")
++    public WebElement discard;
+ 
++    @FindBy(how = How.XPATH, using = "//*/section[2]/div/a[2]")
++    public WebElement saveFeature;
++
++//    @FindBy(how = How.XPATH, using = "/html/body/div[6]/div/div/div/div/div[2]/div/a[2]")
++//    public WebElement addButton;
+ 
+ 
+     // need to continue the page elements identification inside the features!
+     //after selecting all feature option
+ 
++    //choose plan screen
++    @FindBy(how = How.XPATH, using = "//*div[1]/div[5]/div[1]")
++    public WebElement letsGoButton;
++
++    //payment details
++    @FindBy(how = How.XPATH, using = "//*[@id=\"plimusShopperInfoFullName\"]")
++    public WebElement fullName;
++
++    @FindBy(how = How.XPATH, using = "//*[@id=\"plimusShopperInfoPhone\"]")
++    public WebElement phoneNumber;
++
++    @FindBy(how = How.XPATH, using = "//*[@id=\"plimusCreditCardNumber\"]")
++    public WebElement creditCardNumber;
++
++    @FindBy(how = How.XPATH, using = "//*[@id=\"plimusCreditCardSecurityCode\"]")
++    public WebElement securityCode;
+ 
++    @FindBy(how = How.XPATH, using = "//*[@id=\"checkoutButton\"]/span")
++    public WebElement payButton;
++
++    @FindBy(how = How.XPATH, using = "//*[@id=\"oldcpIframe\"]")
++    public WebElement iframe;
++
++    @FindBy(how = How.XPATH, using = "//*[@id=\"wrap\"]/div/div[2]/div[1]/div[3]/div[2]")
++    public WebElement yearly;
+ 
+ 
+ 
