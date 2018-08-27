@@ -67,7 +67,7 @@ public class LoginFlow extends Base {
             //step 3 - add new feature
             wait.until(ExpectedConditions.visibilityOf (wz.startButton));
             wz.startButton.click ();
-            wz.step1XButton.click ();
+//            wz.step1XButton.click ();
             Thread.sleep(2000);
 
 //            fp.addFeatureButton.click ();(
@@ -106,5 +106,5 @@ public class LoginFlow extends Base {
     @AfterClass
     public static void closeSession()
     {
-//        driver.quit ();
+        driver.quit ();
     }}
