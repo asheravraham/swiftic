@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b8aeb29-9616-4150-a622-79818ace8584" name="Default" comment="Updated project structure">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Utils/PropsReader.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/LoginLogoutService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/env.properties" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/LoginFlow_test.xml" afterPath="$PROJECT_DIR$/.idea/shelf/LoginFlow_test.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Updated_project_structure.xml" afterPath="$PROJECT_DIR$/.idea/shelf/Updated_project_structure.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Updated_project_structure1.xml" afterPath="$PROJECT_DIR$/.idea/shelf/Updated_project_structure1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/local_changes_1408.xml" afterPath="$PROJECT_DIR$/.idea/shelf/local_changes_1408.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/wizard.java" afterPath="$PROJECT_DIR$/src/main/java/pages/wizard.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Sanity.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/Sanity.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/flows/TestBase.java" afterPath="$PROJECT_DIR$/src/test/java/flows/TestBase.java" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/Sanity.class" afterPath="$PROJECT_DIR$/target/test-classes/Tests/Sanity.class" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Base.java" afterPath="$PROJECT_DIR$/src/main/java/Utils/Base.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/flows/LoginFlow.java" afterPath="$PROJECT_DIR$/src/test/java/flows/LoginFlow.java" />
+      <change beforePath="$PROJECT_DIR$/swiftic.iml" afterPath="$PROJECT_DIR$/swiftic.iml" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/flows/LoginFlow.class" afterPath="$PROJECT_DIR$/target/test-classes/flows/LoginFlow.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,8 +39,8 @@
       <file leaf-file-name="LoginFlow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/flows/LoginFlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1841">
-              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,10 +48,92 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FeaturesPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Base.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Base.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginLogoutService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/LoginLogoutService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5729#5730#0" expanded="true" />
+                <element signature="e#5754#5755#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PropsReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/PropsReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-126">
+              <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="env.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/env.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Logger.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/logging/Logger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-986">
+              <caret line="490" column="25" lean-forward="false" selection-start-line="490" selection-start-column="25" selection-end-line="490" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wizard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pages/wizard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1071">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocatingElementHandler.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.13.0/selenium-support-3.13.0.jar!/org/openqa/selenium/support/pagefactory/internal/LocatingElementHandler.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <marker date="1530536098077" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1530536098077" expanded="false" signature="172:446" ph="..." />
+                <marker date="1530536098077" expanded="false" signature="615:626" ph=" { " />
+                <marker date="1530536098077" expanded="false" signature="649:655" ph=" }" />
+                <marker date="1530536098077" expanded="true" signature="747:1368" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeaturesPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/FeaturesPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="5334">
               <caret line="256" column="22" lean-forward="false" selection-start-line="256" selection-start-column="22" selection-end-line="256" selection-end-column="22" />
               <folding />
             </state>
@@ -112,10 +203,13 @@
         <option value="$PROJECT_DIR$/src/test/java/Tests/testingElements.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/Sanity.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/Base.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/wizard.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/FeaturesPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/wizard.java" />
         <option value="$PROJECT_DIR$/src/test/java/flows/LoginFlow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Base.java" />
+        <option value="$PROJECT_DIR$/src/main/java/LoginLogoutService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/LoginLogoutService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/PropsReader.java" />
       </list>
     </option>
   </component>
@@ -153,8 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,15 +270,7 @@
               <item name="swiftic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swiftic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swiftic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="swiftic" type="b2602c69:ProjectViewProjectNode" />
@@ -222,6 +306,8 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -235,14 +321,15 @@
     <property name="SearchEverywhereHistoryKey" value="visibilityOf&#9;PSI&#9;JAVA://org.openqa.selenium.support.ui.ExpectedConditions#visibilityOf&#10;unti&#9;PSI&#9;JAVA://com.google.gson.annotations.Until&#10;ba&#9;FILE&#9;file://C:/workspace/swiftic/src/main/java/Utils/Base.java&#10;hover&#9;PSI&#9;JAVA://Utils.Base#hover" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\swiftic\src\main" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\swiftic\src\main\resources" />
       <recent name="C:\workspace\swiftic\src\test\java" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\workspace\swiftic\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -490,8 +577,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1b8aeb29-9616-4150-a622-79818ace8584" name="Default" comment="shelved version 25072018" />
-      <changelist id="" name="LoginFlow test" comment="" />
-      <changelist id="" name="Updated project structure" comment="" />
       <created>1532450040236</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -507,6 +592,10 @@
       <workItem from="1535260843925" duration="1364000" />
       <workItem from="1535315934624" duration="4282000" />
       <workItem from="1535396373427" duration="1585000" />
+      <workItem from="1535398712688" duration="175000" />
+      <workItem from="1535431149447" duration="559000" />
+      <workItem from="1535469230445" duration="1232000" />
+      <workItem from="1535471225777" duration="3938000" />
     </task>
     <task id="LOCAL-00001" summary="Wizard class shelved version 25072018">
       <created>1532471859226</created>
@@ -613,17 +702,31 @@
       <option name="project" value="LOCAL" />
       <updated>1535397853471</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated project structure">
+      <created>1535469694713</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1535469694713</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated project structure">
+      <created>1535469804536</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1535469804536</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginFlow - 2018.08.27 at 22h 20m 19s.xml">
+    <history-entry file="LoginFlow - 2018.08.28 at 07h 42m 32s.xml">
       <configuration name="LoginFlow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginFlow - 2018.08.27 at 22h 20m 36s.xml">
+    <history-entry file="LoginFlow - 2018.08.28 at 18h 16m 16s.xml">
       <configuration name="LoginFlow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginFlow - 2018.08.27 at 22h 22m 17s.xml">
+    <history-entry file="LoginFlow - 2018.08.28 at 18h 18m 38s.xml">
       <configuration name="LoginFlow" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LoginFlow_loginTest - 2018.08.27 at 01h 16m 09s.xml">
@@ -649,7 +752,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96330000" />
+    <option name="totallyTimeSpent" value="102234000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -662,33 +765,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="840" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4029197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30948904" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36058393" sideWeight="0.9156821" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.016058395" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3591241" sideWeight="0.9156821" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14410187" sideWeight="0.4926004" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24128686" sideWeight="0.4926004" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30965146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18766756" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14410187" sideWeight="0.50739956" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14410187" sideWeight="0.50739956" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40145984" sideWeight="0.49785176" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40288568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.540146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -771,7 +873,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/flows/LoginFlow.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -780,34 +890,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/wizard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/mainPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/wizard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1104">
@@ -931,13 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="49" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1165" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/CommonFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1007,14 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/wizard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1076,7 +1143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1084,15 +1150,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#2824#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/FeaturesPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5334">
+          <caret line="256" column="22" lean-forward="false" selection-start-line="256" selection-start-column="22" selection-end-line="256" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.13.0/selenium-support-3.13.0.jar!/org/openqa/selenium/support/pagefactory/internal/LocatingElementHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
+        <state relative-caret-position="567">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <marker date="1530536098077" expanded="false" signature="0:104" ph="/.../" />
@@ -1104,28 +1175,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Base.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/wizard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        <state relative-caret-position="1071">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/flows/LoginFlow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1841">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/FeaturesPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Base.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="256" column="22" lean-forward="false" selection-start-line="256" selection-start-column="22" selection-end-line="256" selection-end-column="22" />
+        <state relative-caret-position="212">
+          <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/logging/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-986">
+          <caret line="490" column="25" lean-forward="false" selection-start-line="490" selection-start-column="25" selection-end-line="490" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/LoginLogoutService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5729#5730#0" expanded="true" />
+            <element signature="e#5754#5755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/PropsReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/env.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -13,7 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="swiftic" target="1.5" />
+      <module name="swiftic" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -53,6 +53,7 @@ public class LoginFlow extends Base {
 
             //step1 - sign up with email
             lp.createbutton.click ();
+            wait.until (ExpectedConditions.visibilityOf (lp.signUpEmail));
             lp.signUpEmail.isDisplayed ();
             lp.signUpEmail.sendKeys (uuid+"@test.com");
             lp.signUpPassword.sendKeys ("1q2w3e4r");
@@ -75,8 +76,11 @@ public class LoginFlow extends Base {
             fp.callUsFeature.click ();
             fp.phoneNumberField.sendKeys ("12345677777");
             fp.saveFaetureButton.click ();
+            Thread.sleep(2000);
             fp.doneEditing.click ();
+            Thread.sleep(2000);
             fp.saveDialogButton.click ();
+
 
             //choose plan screen
             driver.switchTo ().frame(fp.iframe);
