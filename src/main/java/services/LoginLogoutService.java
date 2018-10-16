@@ -1,13 +1,15 @@
 package services;
 
-import org.openqa.selenium.*;
+import Utils.Base;
+import Utils.PropsReader;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
@@ -15,16 +17,18 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
-public class LoginLogoutService
+public class LoginLogoutService extends Base
 {
+
+    public static final long TIMEOUT_FOR_PAGE_LOAD_WAIT_SEC = 200;
+
     private static String OS = System.getProperty("os.name").toLowerCase();
 //    public static final Logger log4j = Logger.getLogger(BaseService.class);
     public static final String resourcesDir = "src" + File.separator + "main"+ File.separator +"resources"+ File.separator;
 
 
-    public WebDriver performLogin(boolean isPermissionTag) throws InterruptedException {
+    public WebDriver performLogin() throws InterruptedException {
         WebDriver driver;
         WebDriverWait driverWait;
         DesiredCapabilities dc;
@@ -46,10 +50,10 @@ public class LoginLogoutService
             if(Boolean.valueOf(PropsReader.getPropValuesForEnv("use.selenium.grid")).booleanValue()) {
                 String nodeUrl = PropsReader.getPropValuesForEnv("remote.node.url");
                 System.out.println("selecting selenium grid");
-                driver = new RemoteWebDriver (new URL (nodeUrl), dc);
-                ((RemoteWebDriver)driver).setFileDetector(new LocalFileDetector ());
+                driver = new RemoteWebDriver(new URL(nodeUrl), dc);
+                ((RemoteWebDriver)driver).setFileDetector(new LocalFileDetector());
             } else {
-                driver = new ChromeDriver (dc);
+                driver = new ChromeDriver(dc);
             }
             driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
             if(OS.equalsIgnoreCase("linux")){
@@ -58,31 +62,31 @@ public class LoginLogoutService
                 driver.manage().window().maximize();
             }
 
-            String email = PropsReader.getPropValuesForEnv("user");
-            String pass = PropsReader.getPropValuesForEnv("password");
-            if (isPermissionTag){
-                email = PropsReader.getPropValuesForHub("user.permission");
-                pass = PropsReader.getPropValuesForHub("password.permission");
-            }
+//            String email = PropsReader.getPropValuesForEnv("user");
+//            String pass = PropsReader.getPropValuesForEnv("password");
+//
+//                    email = PropsReader.getPropValuesForHub("user.permission");
+//                pass = PropsReader.getPropValuesForHub("password.permission");
 
-            String hubURL = PropsReader.getPropValuesForEnv("HubURL");
-            System.out.println("before url up: "+ hubURL);
-            driver.get(hubURL);
+
+            String SwifticURL = PropsReader.getPropValuesForEnv("swifticURL");
+            System.out.println("before url up: "+ SwifticURL);
+            driver.get(SwifticURL);
             System.out.println("after url up");
             driverWait = new WebDriverWait(driver, 60);
-            driverWait.until(ExpectedConditions.visibilityOfElementLocated(BaseLoginPage.EMAIL));
-            WebElement login = driver.findElement(BaseLoginPage.EMAIL);
-            login.sendKeys(email);
+//            driverWait.until(ExpectedConditions.visibilityOf(lp.signUpEmail));
+//            WebElement login = driver.findElement(BaseLoginPage.EMAIL);
+//            login.sendKeys(email);
             TimeUnit.SECONDS.sleep(1);
-            WebElement password = driver.findElement(BaseLoginPage.PASSWORD);
-            password.sendKeys(pass);
+//            WebElement password = driver.findElement(BaseLoginPage.PASSWORD);
+//            password.sendKeys(pass);
             TimeUnit.SECONDS.sleep(1);
-            WebElement loginButton = driver.findElement(BaseLoginPage.LOGIN);
-            loginButton.click();
+//            WebElement loginButton = driver.findElement(BaseLoginPage.LOGIN);
+//            loginButton.click();
             TimeUnit.SECONDS.sleep(5);
-            waitForLoad(driver,driverWait);
+//            waitForLoad(driver,driverWait);
             //wait until logout label is visible - the page was loaded
-            driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"header\"]")));
+//            driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"header\"]")));
             System.out.println("finished login");
             return driver;
 
@@ -94,42 +98,42 @@ public class LoginLogoutService
 
 
 
-    public static void waitForLoad(WebDriver driver,WebDriverWait webDriverWait) throws InterruptedException{
+//    public static void waitForLoad(WebDriver driver,WebDriverWait webDriverWait) throws InterruptedException{
+//
+//        boolean loading = true;
+//        long timeoutCounter = 0;
+//
+//        while (loading && (timeoutCounter <= TIMEOUT_FOR_PAGE_LOAD_WAIT_SEC)) {
+//            TimeUnit.SECONDS.sleep(1);
+//            try {
+//                driver.findElement(By.id("loading-bar"));
+//            } catch (NoSuchElementException e) {
+//                webDriverWait.until((ExpectedCondition) wd ->
+//                        ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
+//                loading = false;
+//            }
+//            timeoutCounter++;
+//        }
+//    }
 
-        boolean loading = true;
-        long timeoutCounter = 0;
-
-        while (loading && (timeoutCounter <= BaseService.TIMEOUT_FOR_PAGE_LOAD_WAIT_SEC)) {
-            TimeUnit.SECONDS.sleep(1);
-            try {
-                driver.findElement(By.id("loading-bar"));
-            } catch (NoSuchElementException e) {
-                webDriverWait.until((ExpectedCondition) wd ->
-                        ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
-                loading = false;
-            }
-            timeoutCounter++;
-        }
-    }
-
-    public  WebDriver performLogin() throws InterruptedException{
-
-        return performLogin(false);
-
-    }
+//    public  WebDriver performLogin() throws InterruptedException{
+//
+//        return performLogin();
+//
+//    }
 
 
-    public void selectDriver(){
-        if(OS.contains(Platform.WINDOWS.name().toLowerCase())){
-            System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriverWindows.exe");
-        }else if(OS.contains(Platform.MAC.name().toLowerCase())) {
-            System.setProperty("webdriver.chrome.driver", "chromeDriver/chromedriverMac");
-        }else{//LINUX
-            System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-            System.setProperty("webdriver.chrome.logfile", "/home/ubuntu/chromedriver.log");
-            System.setProperty("webdriver.chrome.verboseLogging", "true");
-        }
-    }
+//    public void selectDriver(){
+//        if(OS.contains(Platform.WINDOWS.name().toLowerCase())){
+//            System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriverWindows.exe");
+//        }else if(OS.contains(Platform.MAC.name().toLowerCase())) {
+//            System.setProperty("webdriver.chrome.driver", "chromeDriver/chromedriverMac");
+//        }else{//LINUX
+//            System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//            System.setProperty("webdriver.chrome.logfile", "/home/ubuntu/chromedriver.log");
+//            System.setProperty("webdriver.chrome.verboseLogging", "true");
+//        }
+//    }
 
     public void performLogout (WebDriver driver){
 
@@ -170,4 +174,5 @@ public class LoginLogoutService
         }
 
     }
+
 }

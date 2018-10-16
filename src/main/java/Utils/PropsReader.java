@@ -10,14 +10,30 @@ import java.nio.file.Paths;
 import java.util.Properties;
 
 public class PropsReader {
-
     private static final String resourcesDir = "src" + File.separator + "main"+ File.separator +"resources"+ File.separator;
     private static Properties properties = new Properties();
 
 
+    public static String getPropValuesForHub(String prop){
 
+        String propFileName =  resourcesDir +"hub.config.properties";
+        String result = null;
+        try {
+            result = readFile(prop, propFileName);
+        } catch (FileNotFoundException e) {
+            e.getMessage();
+        }
 
+        return result;
+    }
 
+    public static String getPropValuesForMobile(String prop) throws IOException {
+
+        String propFileName =  resourcesDir +"mobile.properties";
+        String result = readFile(prop, propFileName);
+
+        return result;
+    }
 
     public static String getPropValuesForEnv(String prop) {
 
@@ -26,7 +42,7 @@ public class PropsReader {
         try {
             result = readFile(prop, propFileName);
         } catch (FileNotFoundException e) {
-        e.getMessage ();
+            e.getMessage();
         }
 
         return result;
@@ -39,7 +55,7 @@ public class PropsReader {
         try {
             result = readFile(filePath, Charset.defaultCharset());
         } catch (Exception e) {
-           e.getMessage();
+            e.getMessage();
         }
 
         return result;

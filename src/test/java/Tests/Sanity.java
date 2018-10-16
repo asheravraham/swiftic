@@ -26,7 +26,8 @@ public class Sanity extends Base
 
     @BeforeClass
     public static void startSession() throws SAXException, ParserConfigurationException, jdk.internal.org.xml.sax.SAXException, IOException {
-        System.setProperty ("webdriver.chrome.driver","C:\\SeleniumDrivers\\chromedriver.exe");
+
+        Base.selectDriver ();
         driver = new ChromeDriver();
 
         driver.get ("http://my.swiftic.com/regdiscover?_ga=2.178075429.1858937164.1535034245-1422974203.1530031764");
