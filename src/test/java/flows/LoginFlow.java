@@ -29,15 +29,15 @@ public class LoginFlow extends Base {
 
     @BeforeClass
     public static void startSession() throws SAXException, ParserConfigurationException, jdk.internal.org.xml.sax.SAXException, IOException {
-//        System.setProperty ("webdriver.chrome.driver","C:\\SeleniumDrivers\\chromedriver.exe");
+
         Base.selectDriver();
         driver = new ChromeDriver();
-//        String SwifticURL = PropsReader.getPropValuesForEnv("swifticURL");
+
         driver.get ("https://www.swiftic.com/");
         driver.manage().deleteAllCookies();
         driver.manage ().window ().maximize ();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//        extent = new ExtentReports();
+
         mp = PageFactory.initElements (driver, mainPage.class);
         lp = PageFactory.initElements (driver, LoginPage.class);
         wz = PageFactory.initElements (driver, wizard.class);
@@ -91,10 +91,9 @@ public class LoginFlow extends Base {
             Thread.sleep(2000);
             //choose plan screen
             driver.switchTo ().frame(fp.iframe);
+            Thread.sleep(2000);
             fp.yearly.click ();
             log4j.info (" plan was selected");
-
-
 
             //buy now page/Iframe
             fp.fullName.sendKeys ("Asher Test");
