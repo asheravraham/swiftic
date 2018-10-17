@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.xml.sax.SAXException;
 import pages.FeaturesPage;
+import pages.LoginPage;
 import pages.mainPage;
 import pages.wizard;
 
@@ -25,15 +26,20 @@ public class Sanity extends Base
 
     @BeforeClass
     public static void startSession() throws SAXException, ParserConfigurationException, jdk.internal.org.xml.sax.SAXException, IOException {
-        System.setProperty ("webdriver.chrome.driver","C:\\SeleniumDrivers\\chromedriver.exe");
+
+        Base.selectDriver ();
         driver = new ChromeDriver();
-        driver.get ("https://www.swiftic.com/");
+
+        driver.get ("http://my.swiftic.com/regdiscover?_ga=2.178075429.1858937164.1535034245-1422974203.1530031764");
+        driver.manage().deleteAllCookies();
         driver.manage ().window ().maximize ();
+        driver.navigate ().refresh ();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         extent = new ExtentReports ();
         mp = PageFactory.initElements(driver, mainPage.class);
         fp = PageFactory.initElements (driver, FeaturesPage.class);
         wz = PageFactory.initElements (driver, wizard.class);
+        lp = PageFactory.initElements (driver, LoginPage.class);
         WebDriverWait wait = new WebDriverWait(driver, 30);
 
     }
@@ -45,12 +51,18 @@ public class Sanity extends Base
 
         Actions actions = new Actions(driver);
         WebDriverWait wait = new WebDriverWait(driver, 90);
-        mp.createbutton.click ();
+//        mp.createbutton.click ();
+//        driver.navigate ().refresh ();
+        //try to sign up with an existing details
+        lp.signUpEmail.sendKeys ("testuytdswu@gmail.com");
+        lp.signUpPassword.sendKeys ("1q2w3e");
+        lp.rePassword.sendKeys ("1q2w3e");
+        lp.joinButton.click ();
 //        test.log(PASS, "Create button was clicked");
 //        Thread.sleep(3000);
-        wait.until (ExpectedConditions.visibilityOf (wz.appNameField));
-        wz.appNameField.sendKeys ("CNN");
-        wz.appNameNext.click ();
+//        wait.until (ExpectedConditions.visibilityOf (wz.appNameField));
+//        wz.appNameField.sendKeys ("CNN");
+//        wz.appNameNext.click ();
 //            test.log(PASS, "AppName next button was clicked");
 //            Thread.sleep(3000);
         wait.until (ExpectedConditions.visibilityOf (wz.facebookUrl));
@@ -82,7 +94,7 @@ public class Sanity extends Base
 
 //        }
 //        catch (Exception exseptionErr){
-//            test.log(FAIL, "Test Failed: "+ exseptionErr.getMessage());
+//            test.log(FAIL, "Test Failed: "+ exceptionErr.getMessage());
 
 //            test.addScreenCaptureFromPath (CommonFunctions.CaptureScreen(driver,"C:\\Test")));
     }

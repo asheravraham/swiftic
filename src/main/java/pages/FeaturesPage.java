@@ -208,8 +208,8 @@ public class FeaturesPage extends  Utils.Base
     @FindBy(how = How.XPATH, using = "//*/section[3]/div/a/span")
     public WebElement doneEditing;
 
-    @FindBy(how = How.XPATH, using = "/html/body/div[6]/div/div/div/div/div[2]/div/a[2]")
-    public WebElement saveDialogButton;
+//    @FindBy(how = How.XPATH, using = "/html/body/div[6]/div/div/div/div/div[2]/div/a[2]")
+//    public WebElement saveDialogButton;
 
     @FindBy(how = How.XPATH, using = "//*[2]/input")
     public WebElement phoneNumberField;
@@ -220,8 +220,8 @@ public class FeaturesPage extends  Utils.Base
     @FindBy(how = How.XPATH, using = "//*/section[2]/div/a[2]")
     public WebElement saveFeature;
 
-//    @FindBy(how = How.XPATH, using = "/html/body/div[6]/div/div/div/div/div[2]/div/a[2]")
-//    public WebElement addButton;
+//    @FindBy(how = How.XPATH, using = "close_popup ng-scope")
+//    public WebElement exitEditor;
 
 
     // need to continue the page elements identification inside the features!
@@ -256,6 +256,8 @@ public class FeaturesPage extends  Utils.Base
     @FindBy(how = How.ID, using = "id3a")
     public WebElement checkBoxStoreMyCard;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"plimusFeedback\"]/div/div/ul/li/span")
+    public WebElement payMethodError;
 
 
 
