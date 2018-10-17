@@ -13,6 +13,7 @@ public class TestBase
     protected static ExtentReports extent;
     protected static ExtentTest test;
     protected static mainPage mp;
+
     protected static wizard wz;
     protected static FeaturesPage fp;
     protected static String PropFIlePath = "C:\\workspace\\swiftic\\env.properties";

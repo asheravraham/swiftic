@@ -2,6 +2,7 @@ package Utils;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.google.common.io.Files;
 import jdk.internal.org.xml.sax.SAXException;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -32,16 +33,57 @@ public class Base
     protected static wizard wz;
     protected static FeaturesPage fp;
     protected static String PropFIlePath = "C:\\workspace\\swiftic\\env.properties";
+    private static String OS = System.getProperty("os.name").toLowerCase();
+
 //    public  Actions actions = new Actions (driver);
 
 
     Random rndNum = new Random ();
+
+//    public static void  initHub(boolean isPermissionTag){
+//        try {
+//            LoginLogoutService l= new LoginLogoutService();
+//            driver =  l.performLogin();
+//        } catch (Exception e) {
+//            takeScreenShotAfterFailLogin(e);
+//        }
+//    }
+//
+//    private static void takeScreenShotAfterFailLogin(Exception e) {
+//        DateFormat df = new SimpleDateFormat ("ddMMyyyyHHmmss");
+//        String data = df.format(new Date ());
+//        e.getMessage();
+//        e.printStackTrace();
+//    }
+
+    public static final boolean isUiDebugLogEnable = Boolean.valueOf(PropsReader.getPropValuesForEnv("UidDebugLog")).booleanValue();
+
+
+    public static void selectDriver(){
+        if(OS.contains(Platform.WINDOWS.name().toLowerCase())){
+            System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriver.exe");
+        }else if(OS.contains(Platform.MAC.name().toLowerCase())) {
+            System.setProperty("webdriver.chrome.driver", "chromeDriver/chromedriverMac");
+        }else{//LINUX
+            System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+            System.setProperty("webdriver.chrome.logfile", "/home/ubuntu/chromedriver.log");
+            System.setProperty("webdriver.chrome.verboseLogging", "true");
+        }
+    }
 
     public static String CaptureScreen(WebDriver driver, String ScreenShotsPath) {
 
         TakesScreenshot sc = (TakesScreenshot)driver;
         File scShot = sc.getScreenshotAs(OutputType.FILE);
         File oDest  = new File(ScreenShotsPath+".jpg");
+        try
+        {
+            Files.copy(scShot, oDest);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Screenshot Err Desc"+ e.getMessage());
+        }
         return ScreenShotsPath+".jpg";
     }
 
