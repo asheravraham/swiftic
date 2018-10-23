@@ -5,6 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.google.common.io.Files;
 import jdk.internal.org.xml.sax.SAXException;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -40,22 +41,6 @@ public class Base
 
     Random rndNum = new Random ();
 
-//    public static void  initHub(boolean isPermissionTag){
-//        try {
-//            LoginLogoutService l= new LoginLogoutService();
-//            driver =  l.performLogin();
-//        } catch (Exception e) {
-//            takeScreenShotAfterFailLogin(e);
-//        }
-//    }
-//
-//    private static void takeScreenShotAfterFailLogin(Exception e) {
-//        DateFormat df = new SimpleDateFormat ("ddMMyyyyHHmmss");
-//        String data = df.format(new Date ());
-//        e.getMessage();
-//        e.printStackTrace();
-//    }
-
     public static final boolean isUiDebugLogEnable = Boolean.valueOf(PropsReader.getPropValuesForEnv("UidDebugLog")).booleanValue();
 
 
@@ -69,6 +54,14 @@ public class Base
             System.setProperty("webdriver.chrome.logfile", "/home/ubuntu/chromedriver.log");
             System.setProperty("webdriver.chrome.verboseLogging", "true");
         }
+    }
+
+    // select Values method
+    public static void selectValues(WebElement elementToselect1,WebElement elementToselect2)
+    {
+        Actions actions = new Actions (driver);
+        actions.moveToElement(elementToselect1).moveToElement(elementToselect2).click().build().perform();
+
     }
 
     public static String CaptureScreen(WebDriver driver, String ScreenShotsPath) {
@@ -104,24 +97,6 @@ public class Base
         return doc.getElementsByTagName(prop).item(0).getTextContent();
 
     }
-
-
-    // select Values method
-    public void selectValues(WebElement elementToselect)
-    {
-
-//        actions.moveToElement(elementToselect).click().build().perform();
-
-    }
-
-    // mouse hover method
-    public void hover(WebElement elementToselect)
-    {
-//        actions.moveToElement(elementToselect).build().perform();
-
-    }
-
-
 
 //    public Base(WebDriver driver){
 //        try {

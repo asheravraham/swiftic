@@ -23,7 +23,7 @@ import static org.junit.Assert.fail;
 import static services.UIDebugLogger.log4j;
 
 
-public class LoginFlow extends Base {
+public class SignUpFlow extends Base {
 
     String uuid = UUID.randomUUID().toString();
 
@@ -73,7 +73,7 @@ public class LoginFlow extends Base {
             wz.facebookNext.click ();// need to wait about 20 sec and handle with some un expected popups
 
             log4j.info ("FB page was inserted");
-            Thread.sleep(5000);
+            wait.until(ExpectedConditions.visibilityOf (wz.startButton));
             //step 3 - add new feature
             Thread.sleep(2000);
             wz.startButton.click ();
@@ -82,6 +82,7 @@ public class LoginFlow extends Base {
             Thread.sleep(2000);
             wait.until(ExpectedConditions.visibilityOf (fp.callUsFeature));
             fp.callUsFeature.click ();
+            wait.until(ExpectedConditions.visibilityOf (fp.phoneNumberField));
             fp.phoneNumberField.sendKeys ("12345677777");
             fp.saveFaetureButton.click ();
             log4j.info ("Feature was added ");
@@ -89,6 +90,7 @@ public class LoginFlow extends Base {
             fp.doneEditing.click ();
 
             Thread.sleep(2000);
+
             //choose plan screen
             driver.switchTo ().frame(fp.iframe);
             Thread.sleep(2000);
@@ -106,15 +108,16 @@ public class LoginFlow extends Base {
             fp.payButton.click ();
             log4j.info ("pay flow ");
 
+
         } catch (Exception err) {
             log4j.error(err.getMessage(), err);
-            Base.CaptureScreen (driver, "C:\\Test\\swifticscreenshots\\screenshot");
+            Base.CaptureScreen (driver, "C:\\workspace\\swiftic\\screenshots\\screenshot");
             fail ("Test fail see error description");
         }
 
         catch(AssertionError asrerr) {
             log4j.error ("Assert Failed: " + asrerr.getMessage ());
-            Base.CaptureScreen (driver, "C:\\Test\\swifticscreenshots\\screenshot");
+            Base.CaptureScreen (driver, "C:\\workspace\\swiftic\\screenshots\\screenshot");
             fail("Assertion Fail see description");
         }
     }
