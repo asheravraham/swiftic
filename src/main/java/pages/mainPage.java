@@ -11,6 +11,9 @@ public class mainPage extends Utils.Base
     @FindBy(how = How.ID, using = "menu-item-17422")
     public WebElement createbutton;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"menu-item-17453\"]/a")
+    public WebElement signInButton;
+
     @FindBy(how = How.ID, using = "chosen_language")
     public WebElement chosen_language;
 

@@ -23,5 +23,18 @@ public class LoginPage extends Base{
     @FindBy(how = How.XPATH, using = "//*[@id=\"registerForm\"]/div[4]/div/button")
     public WebElement joinButton;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"userName\"]")
+    public WebElement signInUserName;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"password\"]")
+    public WebElement signInPassword;
+
+    @FindBy(how = How.XPATH, using = "//*[3]/div/button/span")
+    public WebElement signInButton;
+
+    @FindBy(how = How.XPATH, using = "//*/section/ul/li[1]/a")
+    public WebElement userMail;
+
+    @FindBy(how = How.XPATH, using = "//*/section/ul/li[3]/a")
+    public WebElement logoutButton;
 }
