@@ -25,10 +25,10 @@ import static services.UIDebugLogger.log4j;
 
 public class SignUpFlow extends Base {
 
-    String uuid = UUID.randomUUID().toString();
+     private String uuid = UUID.randomUUID().toString();
 
     @BeforeClass
-    public static void startSession() throws SAXException, ParserConfigurationException, jdk.internal.org.xml.sax.SAXException, IOException {
+    public static void startSession() {
 
         Base.selectDriver();
         driver = new ChromeDriver();
@@ -49,7 +49,7 @@ public class SignUpFlow extends Base {
     }
 
     @Test
-    public void SanityTest() throws IOException, InterruptedException {
+    public void SanityTest() {
         try {
 
             WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -58,7 +58,7 @@ public class SignUpFlow extends Base {
             lp.createbutton.click ();
             log4j.info ("create button clicked");
             wait.until (ExpectedConditions.visibilityOf (lp.signUpEmail));
-            lp.signUpEmail.sendKeys (uuid+"@test.com");
+            lp.signUpEmail.sendKeys (uuid+"@conduit.com");
             Thread.sleep(2000);
             lp.signUpPassword.sendKeys ("1q2w3e4r");
             Thread.sleep(2000);

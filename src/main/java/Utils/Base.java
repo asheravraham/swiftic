@@ -41,7 +41,7 @@ public class Base
 
     Random rndNum = new Random ();
 
-    public static final boolean isUiDebugLogEnable = Boolean.valueOf(PropsReader.getPropValuesForEnv("UidDebugLog")).booleanValue();
+    public static final boolean isUiDebugLogEnable = Boolean.valueOf (PropsReader.getPropValuesForEnv ("UidDebugLog"));
 
 
     public static void selectDriver(){
@@ -81,7 +81,7 @@ public class Base
     }
 
     //Read data from XML file
-    public static String getData ( String path,String prop ) throws ParserConfigurationException, SAXException, IOException, org.xml.sax.SAXException
+    public static String getData ( String path,String prop ) throws ParserConfigurationException, IOException, org.xml.sax.SAXException
     {
 
         File envProp = new File(path);
@@ -134,7 +134,7 @@ public class Base
 
 
 
-    public static boolean IsElemenetExists(WebElement webElement) {
+    private static boolean IsElemenetExists(WebElement webElement) {
         try {
 
             if (webElement != null) {
@@ -177,7 +177,7 @@ public class Base
         return attribute;
     }
 
-    public static void ScorllToElement(WebElement element) {
+    private static void ScorllToElement(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
 
@@ -232,34 +232,10 @@ public class Base
             e.printStackTrace();
         }
     }
-    public boolean waitForPageLoad(int waitTimeInSec,
-                                   ExpectedCondition<Boolean>... conditions) {
-        boolean isLoaded = false;
-        Wait<WebDriver> wait = new FluentWait(driver)
-                .withTimeout(waitTimeInSec, TimeUnit.SECONDS)
-                .ignoring(StaleElementReferenceException.class)
-                .pollingEvery(2, TimeUnit.SECONDS);
-        for (ExpectedCondition<Boolean> condition : conditions) {
-            isLoaded = wait.until(condition);
-            if (isLoaded == false) {
-                //Stop checking on first condition returning false.
-                break;
-            }
-        }
-        return isLoaded;
-
-
-    }
 
 
 
-    public void pause(Integer milliseconds){
-        try {
-            TimeUnit.MILLISECONDS.sleep(milliseconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+
 
 
     public static void ClickOnElement(WebElement webElement)
@@ -293,9 +269,7 @@ public class Base
 
     }
 
-    private static Object getDriver() {
-        return getDriver();
-    }
+
 
 
     //go to another page
